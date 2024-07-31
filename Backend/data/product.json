@@ -1,0 +1,169 @@
+[
+  {
+    "_id": "66a8d2e6154a259eabc33ffd",
+    "name": "Apple IPOD",
+    "price": 320,
+    "description": "Best Product Ever",
+    "ratings": 5,
+    "images": [
+      {
+        "public_id": "12345",
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPX2juMtLGUzeIhURPAuGyRm9SMlRSAK9-8Q&s",
+        "_id": "66a8d2e6154a259eabc33ffe",
+        "id": "66a8d2e6154a259eabc33ffe"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "Sagar Sah",
+    "stock": 50,
+    "numofReviews": 50,
+    "reviews": [
+      {
+        "name": "Sagar",
+        "rating": 5,
+        "comment": "Very Awesome",
+        "_id": "66a8d2e6154a259eabc33fff",
+        "id": "66a8d2e6154a259eabc33fff"
+      }
+    ],
+    "createdAt": "2024-07-30T11:47:50.824Z",
+    "updatedAt": "2024-07-30T11:47:50.824Z",
+    "__v": 0,
+    "id": "66a8d2e6154a259eabc33ffd"
+  },
+  {
+    "_id": "66a8d3b5154a259eabc34001",
+    "name": "Samsung Galaxy S21",
+    "price": 799,
+    "description": "Latest Samsung Galaxy smartphone with high-end features",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "image1",
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/levant/galaxy-s21/gallery/levant-galaxy-s21-5g-g991-sm-g991bzvdmea-thumb-368828014?$320_320_PNG$",
+        "_id": "66a8d3b5154a259eabc34002",
+        "id": "66a8d3b5154a259eabc34002"
+      },
+      {
+        "public_id": "image2",
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/levant/galaxy-s21/gallery/levant-galaxy-s21-5g-g991-sm-g991bzvdmea-frontviolet-368827986?$320_320_PNG$",
+        "_id": "66a8d3b5154a259eabc34003",
+        "id": "66a8d3b5154a259eabc34003"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "Tech Store",
+    "stock": 150,
+    "numofReviews": 100,
+    "reviews": [
+      {
+        "name": "John Doe",
+        "rating": 5,
+        "comment": "Absolutely love this phone!",
+        "_id": "66a8d3b5154a259eabc34004",
+        "id": "66a8d3b5154a259eabc34004"
+      },
+      {
+        "name": "Jane Smith",
+        "rating": 4,
+        "comment": "Great phone but a bit pricey.",
+        "_id": "66a8d3b5154a259eabc34005",
+        "id": "66a8d3b5154a259eabc34005"
+      }
+    ],
+    "createdAt": "2024-07-30T11:51:17.963Z",
+    "updatedAt": "2024-07-30T11:51:17.963Z",
+    "__v": 0,
+    "id": "66a8d3b5154a259eabc34001"
+  },
+  {
+    "_id": "66a8d3dc154a259eabc34007",
+    "name": "Apple MacBook Air",
+    "price": 999,
+    "description": "The latest MacBook Air with M1 chip for powerful performance.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "public_id": "image1",
+        "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-202011_GEO_US?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1604278672000",
+        "_id": "66a8d3dc154a259eabc34008",
+        "id": "66a8d3dc154a259eabc34008"
+      },
+      {
+        "public_id": "image2",
+        "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gold-select-202011_GEO_US?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1604278672000",
+        "_id": "66a8d3dc154a259eabc34009",
+        "id": "66a8d3dc154a259eabc34009"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "Apple Store",
+    "stock": 100,
+    "numofReviews": 200,
+    "reviews": [
+      {
+        "name": "Alice Johnson",
+        "rating": 5,
+        "comment": "This MacBook Air is amazing! Super fast and lightweight.",
+        "_id": "66a8d3dc154a259eabc3400a",
+        "id": "66a8d3dc154a259eabc3400a"
+      },
+      {
+        "name": "Bob Brown",
+        "rating": 4,
+        "comment": "Great laptop but the battery life could be better.",
+        "_id": "66a8d3dc154a259eabc3400b",
+        "id": "66a8d3dc154a259eabc3400b"
+      }
+    ],
+    "createdAt": "2024-07-30T11:51:56.449Z",
+    "updatedAt": "2024-07-30T11:51:56.449Z",
+    "__v": 0,
+    "id": "66a8d3dc154a259eabc34007"
+  },
+  {
+    "_id": "66a8d3ff154a259eabc3400d",
+    "name": "Sony WH-1000XM4",
+    "price": 350,
+    "description": "Industry leading noise canceling wireless headphones.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "public_id": "image1",
+        "url": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SX679_.jpg",
+        "_id": "66a8d3ff154a259eabc3400e",
+        "id": "66a8d3ff154a259eabc3400e"
+      },
+      {
+        "public_id": "image2",
+        "url": "https://m.media-amazon.com/images/I/61D4Z3yKPAL._AC_SX679_.jpg",
+        "_id": "66a8d3ff154a259eabc3400f",
+        "id": "66a8d3ff154a259eabc3400f"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "Sony Store",
+    "stock": 200,
+    "numofReviews": 300,
+    "reviews": [
+      {
+        "name": "Charlie Davis",
+        "rating": 5,
+        "comment": "Best noise-canceling headphones I have ever used!",
+        "_id": "66a8d3ff154a259eabc34010",
+        "id": "66a8d3ff154a259eabc34010"
+      },
+      {
+        "name": "Dana Evans",
+        "rating": 4,
+        "comment": "Excellent sound quality, but they are a bit expensive.",
+        "_id": "66a8d3ff154a259eabc34011",
+        "id": "66a8d3ff154a259eabc34011"
+      }
+    ],
+    "createdAt": "2024-07-30T11:52:31.754Z",
+    "updatedAt": "2024-07-30T11:52:31.754Z",
+    "__v": 0,
+    "id": "66a8d3ff154a259eabc3400d"
+  }
+]
