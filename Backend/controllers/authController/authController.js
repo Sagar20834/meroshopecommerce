@@ -1,6 +1,7 @@
 const User = require("../../models/user/user");
 const appError = require("../../utils/appError");
 const sendToken = require("../../utils/jwtToken");
+const sendEmail = require("../../utils/sendEmail.js");
 
 //register a user ==> /api/v1/register
 
@@ -48,6 +49,49 @@ const loginUser = async (req, res, next) => {
   }
 };
 
+//forgot password  /api/v1/password/forgot
+
+const forgotPassword = async (req, res, next) => {
+  const user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return next(appError("User not found", 404));
+  }
+
+  const resetToken = user.getResetPasswordToken();
+
+  await user.save({
+    validateBeforeSave: false,
+  });
+
+  //create reset password url
+
+  const resetUrl = `${req.protocol}://${req.get(
+    "host"
+  )}/api/v1/password/reset/${resetToken}`;
+
+  const message = ` Your password reset token is as follows: \n\n ${resetUrl}\n\n  if you have not requested it please ignore this`;
+
+  try {
+    await sendEmail({
+      email: user.email,
+      subject: "Mero Shop Password Reset",
+      message,
+    });
+    res.status(200).json({
+      success: true,
+      message: `Email sent to ${user.email} for password reset`,
+    });
+  } catch (error) {
+    user.resetPasswordToken = undefined;
+    user.resetPasswodExpire = undefined;
+    await user.save({
+      validateBeforeSave: false,
+    });
+
+    return next(appError(error.message, 500));
+  }
+};
+
 //logout user /api/v1/logout
 const logout = async (req, res, next) => {
   try {
@@ -68,4 +112,5 @@ module.exports = {
   registerUser,
   loginUser,
   logout,
+  forgotPassword,
 };
