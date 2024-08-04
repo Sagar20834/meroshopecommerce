@@ -21,8 +21,6 @@ const productSchema = new mongoose.Schema(
     ratings: {
       type: Number,
       default: 0,
-      min: [0, "Rating must be a positive number"],
-      max: [5, "Rating must be between 0 and 5"],
     },
     images: [
       {
@@ -79,6 +77,11 @@ const productSchema = new mongoose.Schema(
     },
     reviews: [
       {
+        user: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "User",
+          required: true,
+        },
         name: {
           type: String,
           required: true,
@@ -86,8 +89,6 @@ const productSchema = new mongoose.Schema(
         rating: {
           type: Number,
           required: true,
-          min: [1, "Rating must be between 1 and 5"],
-          max: [5, "Rating must be between 1 and 5"],
         },
         comment: {
           type: String,

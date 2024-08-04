@@ -5,38 +5,51 @@ const {
   getSingleProduct,
   updateProduct,
   deleteProduct,
+  createProductReview,
+  getProductReviews,
+  deleteProductReview,
 } = require("../../controllers/productController/productController");
 const {
   isAuthenticatedUser,
   authorizedRoles,
 } = require("../../middlewares/isAuthenticatedUser");
-
+const isLoggedIn = require("../../middlewares/isLoggedIn");
 const productRoutes = express.Router();
 
 productRoutes.get(
   "/products",
-  isAuthenticatedUser,
-  authorizedRoles("admin"),
+  isLoggedIn,
+  // authorizedRoles("admin"),
+  // authorizedRoles("admin"),
   getProducts
 );
-productRoutes.get("/product/:id", isAuthenticatedUser, getSingleProduct);
+productRoutes.get(
+  "/product/:id",
+  isLoggedIn,
+  authorizedRoles("admin"),
+  getSingleProduct
+);
 productRoutes.post(
   "/admin/product/new",
-  isAuthenticatedUser,
+  isLoggedIn,
   authorizedRoles("admin"),
   createProduct
 );
 productRoutes.put(
   "/admin/product/:id",
-  isAuthenticatedUser,
+  isLoggedIn,
   authorizedRoles("admin"),
   updateProduct
 ); //admin route
 productRoutes.delete(
   "/admin/product/:id",
-  isAuthenticatedUser,
+  isLoggedIn,
   authorizedRoles("admin"),
   deleteProduct
 ); //admin route
+
+productRoutes.put("/review", isLoggedIn, createProductReview);
+productRoutes.get("/reviews", isLoggedIn, getProductReviews);
+productRoutes.delete("/reviews", isLoggedIn, deleteProductReview);
 
 module.exports = productRoutes;
